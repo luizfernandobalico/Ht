@@ -1,0 +1,88 @@
+body {
+    font-family: "Oxanium",cursive;
+    background-color: #000000;
+    color:#ffffff;
+}
+
+
+body::before { /* Antes do Bdy ele vai criar um pseudo elemento */
+    
+    content:"";
+    background-image: url(../imagens/bg-desktop2.jpg);
+    background-repeat: no repeat;
+    background-size:  cover;
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    z-index:-1;
+    
+      
+}
+
+
+
+
+.cabecalho {
+    display:flex;/* Flex propriedades para as tags pai e tags filhos */
+   /* background-color:aqua;*/
+    justify-content:center;/* justificar o alinhamento no centro */
+}
+
+ 
+.selecao-de-personagens{
+  /*  background-color: blueviolet; */
+    display:flex;
+    align-items:center;  /*Alinha os Elementos Verticalmente */
+    gap:30px; /*faz uma separação entre as imagens */
+   /* min-height: calc(100vh - 152px); */
+    justify-content: center;
+}
+
+.selecao-de-personagens .lista-de-personagens { /* quero estilar esta classe que tem outro elemento que é a lista de personagens*/
+    display:flex; /* Deixa os elementos em linha */
+  /*  background-color: brown;*/
+    flex-wrap:wrap;
+    gap:30px;/* Espaçamento é espaço */
+    justify-content:center;
+}
+
+.selecao-de-personagens .personagens {
+   /* background-color: darkolivegreen;*/
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    max-width:585 px;
+    gap: 25px;
+    }
+.lista-de personagens .personagem img {
+    width:100%;
+    height:100%;
+}
+
+.lista-de-personagens .personagem.selecionado {
+   box-shadow: 0px 0px 24px 5 px #0271f7; 
+}
+
+.personagem-selecionado {
+    /*background-color: green;*/
+    text-align: center;
+    max-height: 530px;
+}
+
+.personagem-selecionado .personagem-grande { /* Tentar usar Imgem sempre meio quadradas */
+    width: 430px;
+    height:430px;
+}
+
+.personagem-selecionado .nome-personagem{
+    border-botton: 2px solid #47f4ff;
+    letter-spacing:4 px;
+    text-transform: uppercase;
+}
+
+.personagem-selecionado .descricao-personagem {
+    font-size:16px;
+    line-height: 22px;
+    text-align:center;
+    margin-top: 20px;
+}
